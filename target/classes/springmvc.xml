@@ -30,7 +30,7 @@
        <property name="suffix" value=".jsp"></property>
     </bean> 
     <!--4.加载db属性文件  -->
-	<util:properties id="db" location="classpath:db.properties" />
+	<util:properties id="db" location="classpath:db.properties"/>
 	<!--5.数据源  -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="#{db.driver}" />
@@ -54,4 +54,6 @@
 		<!-- 引用MyBatis 的session工厂 -->
 		<property name="sqlSessionFactory" ref="sessionFactory" />
 	</bean>
+	
+
 </beans>
