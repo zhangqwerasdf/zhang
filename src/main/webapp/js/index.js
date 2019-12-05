@@ -113,9 +113,9 @@ $("#regEmail").blur(function(){
     //alert(emailVal);
     // js 判断不相等  不能使用   !""==xxxx
     if(null != emailVal && ""!=emailVal){
-        var params={"email":emailVal};
+        var params={"accounts":emailVal};
        // alert(params);
-        $.post("front/user/validateEmail.action",params,function(data){
+        $.post("selectAll",params,function(data){
             if(data=="success"){
                regIsCommitEmail=true;
                $("#emailMsg").text("该邮箱可用").css("color","green");
@@ -169,7 +169,7 @@ function commitRegForm(){
              
              $.ajax({
               
-                url:"front/user/insertUser.action",
+                url:"add",
                 data:$("#regForm").serialize(),
                 type:"POST",
                 success:function(data){
@@ -207,13 +207,13 @@ function commitLogin(){
    var password =$("#loginPassword").val();
    if(null!=email && email!="" && null!=password && password!=""){
         var params=$("#loginForm").serialize();
-       // alert(params);
+        //alert(params);
         // post要小写
-        $.post("front/user/loginUser.action",params,function(data){
-        // alert(data);
-                 if(data=='success'){
-                      document.location.reload();
-                   }
+        $.post("userLogin",params,function(data){
+        	//alert(data);
+             if(data=="sucess"){
+                  document.location.reload();
+               }
         });
         
         return false;

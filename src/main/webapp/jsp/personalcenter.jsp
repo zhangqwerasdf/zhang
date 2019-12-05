@@ -11,8 +11,8 @@
     <meta name="author" content="尚忠祥">
     
 <!--<base href="http://localhost:8080/Voids/">--><base href=".">
-    <link rel="stylesheet" href="../js/z/base.css">
-    <link rel="stylesheet" href="../js/z/profile.css">
+    <link rel="stylesheet" href="http://localhost:8080/SSMVideo/z/base.css">
+    <link rel="stylesheet" href="http://localhost:8080/SSMVideo/js/profile.css">
     <link rel="icon" href="http://localhost:8080/Voids/static/z/favicon.png" type="image/png">
     <title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
 </head>
@@ -22,7 +22,7 @@
 
 <header>
 	<div class="container top_bar clearfix">
-		<img src="../js/z/logo.png" alt="智游">
+		<img src="http://localhost:8080/SSMVideo/z/logo.png" alt="智游">
 		<div id="tele">
 			<span>4006-371-555</span>
 			<span>0371-88888598</span>
@@ -33,17 +33,14 @@
 			<ul class="clearfix f_left">
 				<li>首页</a></li>
 				
-				<li class="menu_active">个人中心</a></li>
+				<li class="menu_active">个人中心<a></a></li>
 			</ul>
 			
 			<div id="user_bar">
 				<a >
 						
-						<img id="avatar" src="../js/z/avatar_lg.png" alt="" width="30px;">
-						
-						
+						<img id="avatar" src="http://localhost:8080/SSMVideo/z/avatar_lg.png" alt="" width="30px;">
 					
-
 				</a>
 				<a  id="lay_out">退出</a>
 			</div>
@@ -56,39 +53,26 @@
             <h2>我的资料</h2>
             <div id="profile_tab">
                 <ul class="profile_tab_header f_left clearfix">
-                    <li>更改资料</a></li>
+                    <li><a href="updateshow">更改资料</a></li>
                     <li class="profile_tab_line">|</li>
-                    <li>更改头像</a></li>
+                    <li><a href="imgshow">更改头像</a></li>
                     <li class="profile_tab_line">|</li>
-                    <li>密码安全</a></li>
+                    <li><a href="passwordshow">密码安全</a></li>
                 </ul>
                 <div class="proflle_tab_body">
                     
                     <div class="proflle_tab_workplace clearfix">
                         <div class="profile_avatar_area">
-                            
-		                         <img id="avatar" width="200px;" src="http://localhost:8080/Voids/" alt="">
-		                      
-                  
+		                         <img id="avatar" width="200px;" src="http://localhost:8080/SSMVideo/z/avatar.png" alt="">
                             <p>
-                            
-						    
                                                                           欢迎回来！</p>
                         </div>
                         <ul class="profile_ifo_area">
-                            <li><span class="dd">昵　称：</span></li>
-                            
-                            
-                            
-                            
-                            
-                            <li><span class="dd">性　别：</span>
-                                
-                                 
-                             </li>
-                            <li><span class="dd">生　日：</span></li>
-                            <li><span class="dd">邮　箱：</span>1@qq.com</li>
-                            <li><span class="dd">所在地：</span> </li>
+                            <li><span class="dd">昵　称：<input type="text" name="nickname" value="${user.nickname}"></span></li>
+                            <li><span class="dd">性　别：<input type="text" name="sex" value="${user.sex}"></span></li>
+                            <li><span class="dd">生　日：<input type="text" name="birthday" value="${user.birthday}"></span></li>
+                            <li><span class="dd">邮　箱：<input type="text" name="accounts" value="${user.accounts}"></span></li>
+                            <li><span class="dd">所在地：<input type="text" name="address" value="${user.address}"></span> </li>
                             
                         </ul>
                     </div>
@@ -99,9 +83,9 @@
     <footer>
         <div class="container">
             <ul>
-                <li><img src="../js/z/footer_logo.png" alt="" id="foot_logo"></li>
+                <li><img src="http://localhost:8080/SSMVideo/z/footer_logo.png" alt="" id="foot_logo"></li>
                 <li>版权所有：智游3G教育　　　©&nbsp;www.zhiyou100.com</li>
-                <li><img src="../js/z/a.png" alt="" id="wxgzh"></li>
+                <li><img src="http://localhost:8080/SSMVideo/z/a.png" alt="" id="wxgzh"></li>
             </ul>
         </div>
     </footer>

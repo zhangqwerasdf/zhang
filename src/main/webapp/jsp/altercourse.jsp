@@ -12,7 +12,7 @@
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>智游教育</title>
 
-<link href="../js/z/bootstrap.css" rel="stylesheet">
+<link href="http://localhost:8080/SSMVideo/z/bootstrap.css" rel="stylesheet">
 
 <style type="text/css">
 .col-md-1 {
@@ -50,7 +50,7 @@ b {
 			<ul class="nav navbar-nav">
 				<li><a>视频管理</a></li>
 				<li><a>主讲人管理</a></li>
-				<li class="active" href=""><a>课程管理</a></li>
+				<li class="active" ><a>课程管理</a></li>
 			</ul>
 			<p class="navbar-text navbar-right">
 				<span>admin</span> <i class="glyphicon glyphicon-log-in" aria-hidden="true"></i>&nbsp;&nbsp;<a class="navbar-link">退出</a>
@@ -79,74 +79,28 @@ b {
 
 	<div class="container" style="margin-top: 20px;">
 
-		<form id="infoForm" class="form-horizontal" >
+		<form id="course" class="form-horizontal" action="updateCourse">
 
-			<input name="id" value="6" type="hidden">
+			<input name="id" value="${course.id}" type="hidden">
 			
 			<div class="form-group">
 			    <label for="subjectId" class="col-sm-2 control-label">所属学科</label>
 			    <div class="col-sm-10">
 									
-					<select name="subjectID" id="subjectId" class="form-control">
-						<option value="0">请选择所属学科</option>
-							
-							
-							
-							<option value="0">WEB前端</option>
-							
-							
-							
-							
-							<option value="0">Java</option>
-							
-							
-							
-							
-							<option value="0">Android</option>
-							
-							
-							
-							
-							<option value="0">IOS</option>
-							
-							
-							
-							
-							<option value="0">大数据</option>
-							
-							
-							
-							
-							<option value="0">UI</option>
-							
-							
-							
-							
-							<option value="0">VR</option>
-							
-							
-							
-							
-							<option value="0">U3D</option>
-							
-							
-							
-							
-							<option value="0">人工智能</option>
-							
-							
-							
-							
-							<option value="0">Python</option>
-							
-							
-							
-							
-							<option value="0">PHP</option>
-							
-							
+					<select name="subject_id" id="subject_id" class="form-control">
+						 <option value="${course.subject_id}">请选择所属学科</option>
+							<option value="1">WEB前端</option>
+							<option value="2">Java</option>
+							<option value="3">Android</option>
+							<option value="4">IOS</option>
+							<option value="5">大数据</option>
+							<option value="6">UI</option>
+							<option value="7">VR</option>
+							<option value="8">U3D</option>
+							<option value="9">人工智能</option>
+							<option value="10">Python</option>
+							<option value="11">PHP</option>
 					</select>
-
 			    </div>
 			  </div>
 			
@@ -155,13 +109,13 @@ b {
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">标题</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="courseTitle" id="subjectTitle" value="Web前端入门小项目" placeholder="课程标题" type="text">
+					<input class="form-control" name="course_title" id="course_title" value="${course.course_title}" placeholder="课程标题" type="text">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="courseDesc" class="col-sm-2 control-label">简介</label>
 				<div class="col-sm-10">
-					<textarea class="form-control" id="courseDesc" name="courseDesc" rows="3">适合无编程基础但想学H5前端开发的同学入门学习，也适合UI、Java、PHP等其他学科学员预习或练习。本课程通过新闻页面、个人主页、个人简历、场景秀等多个项目案例由浅入深以项目实战的方式让同学们体验到前端开发乐趣。本课程突出实战，如果希望深入学习课程中涉及到的知识可报名学习智游前端开发课程。</textarea>
+					<textarea class="form-control" id="course_desc" name="course_desc" rows="3">${course.course_desc}</textarea>
 				</div>
 			</div>
 			<div class="form-group">
@@ -177,11 +131,11 @@ b {
 <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<script src="../js/js/jquery-1.js"></script>
-<script src="../js/js/bootstrap.js"></script>
-<script src="../js/js/confirm.js"></script>
-<script src="../js/js/jquery.js"></script>
-<script src="../js/js/message_cn.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/jquery-1.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/bootstrap.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/confirm.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/jquery.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/message_cn.js"></script>
 
 
 

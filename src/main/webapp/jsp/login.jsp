@@ -5,11 +5,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-<script src="js/jquery/jquery.js" > </script>
-<script src="js/jquery/jquery.validate.min.js" >  </script>
-<script src="js/jquery/messages_zh.js" >  </script>
+<script src="jquery/jquery.js" > </script>
+<script src="jquery/jquery.validate.min.js" >  </script>
+<script src="jquery/messages_zh.js" >  </script>
     <title>登录页面</title>
-  <link rel="stylesheet" type="text/css" href="js/z/logincss.css" charset="utf-8"/> 
+  <link rel="stylesheet" type="text/css" href="jquery/logincss.css" charset="utf-8"/> 
 
 <script type="text/javascript">
 	$().ready(function() {
@@ -61,7 +61,7 @@
             <h3>智游客户关系管理系统</h3>
         </div>
         <div id="div4">
-        	<form id="for1" action="http://localhost:8080/SSMVideo/jsp/%E5%9C%A8%E7%BA%BF%E5%85%AC%E5%BC%80%E8%AF%BE-%E6%99%BA%E6%B8%B8%E6%95%99%E8%82%B2.jsp" method="post" name="for1" onsubmit="return check()">
+        	<form id="for1" action="http://localhost:8080/SSMVideo/jsp/HomePage.jsp" method="post" name="for1" onsubmit="return check()">
 	            <input type="text" class="text1" name="username" placeholder="请输入用户名">
 	            <br>
 	            <input type="password" class="text1" name="password" placeholder="请输入密码" >

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -33,14 +32,17 @@
 		<span>欢迎来到IT培训的黄埔军校——智游教育！</span>
 			
 			<div id="userBlock" style="float:right">
-			 
-				<a href="">登陆</a>
-				<a href="注册.jsp">注册</a>			
-				 
+	 
+				<a >退出</a>
+				<c:if test="${empty user }">
+				<a id="login_open" >登录</a>
+				</c:if>
+				<c:if test="${!empty user }">
+				<a id="login_open" >${user.accounts }</a>
+				</c:if>
+				<a id="reg_open">注册 </a>	
 				
 				
-				<a href="">退出</a>
-				 
 			</div>
 
 		<a onclick="JavaScript:addFavorite2()"><img src="../js/z/sc.png" draggable="false">加入收藏</a>
@@ -228,6 +230,7 @@
 		<div class="mask_content_header">
 			<img src="../js/z/logo.png" alt="" class="ma">
 		</div>
+		
 		<div class="mask_content_body">
 			<form id="regForm" action="http://localhost:8080/Voids/user/insertUser.action">
 				<h3>新用户注册</h3>

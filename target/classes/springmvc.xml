@@ -27,6 +27,7 @@
 	<mvc:default-servlet-handler/>
 	<!-- 3.视图解析器,可以帮我们把返回的视图自动加上前后缀 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <!-- <property name="prefix" value="/WEB-INF/jsp/"></property> -->
        <property name="suffix" value=".jsp"></property>
     </bean> 
     <!--4.加载db属性文件  -->
@@ -55,5 +56,7 @@
 		<property name="sqlSessionFactory" ref="sessionFactory" />
 	</bean>
 	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
 
 </beans>

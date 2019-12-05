@@ -12,8 +12,8 @@
     <meta name="keywords" content="Web前端视频教程,大数据视频教程,HTML5视频教程,UI视频教程,PHP视频教程,java视频教程,python基础教程">
     <meta name="description" content="智游教育在线课程视频,为您提供java,python,HTML5,UI,PHP,大数据等学科经典视频教程在线浏览学习,精细化知识点解析,深入浅出,想学不会都难,智游教育,学习成就梦想！">
     
-<link rel="stylesheet" href="../js/z/base.css">
-<link rel="stylesheet" href="../js/z/css.css">
+<link rel="stylesheet" href="http://localhost:8080/SSMVideo/z/base.css">
+<link rel="stylesheet" href="http://localhost:8080/SSMVideo/z/css.css">
 <link rel="icon" href="http://localhost:8080/video/favicon.png" type="image/png">
     <title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
 </head>
@@ -34,19 +34,19 @@
 			
 			
 
-		<a onclick="JavaScript:addFavorite2()"><img src="../js/z/sc.png" draggable="false">加入收藏</a>
+		<a onclick="JavaScript:addFavorite2()"><img src="http://localhost:8080/SSMVideo/z/sc.png" draggable="false">加入收藏</a>
 		
-		<a target="_blank"><img src="../js/z/we.png" draggable="false">后台管理</a>
-		<a class="color_e4"><img src="../js/z/phone.png" draggable="false"> 0371-88888598　　4006-371-555</a>
+		<a target="_blank" href="http://localhost:8080/SSMVideo/video/showvideo.jsp"><img src="http://localhost:8080/SSMVideo/z/we.png" draggable="false">后台管理</a>
+		<a class="color_e4"><img src="http://localhost:8080/SSMVideo/z/phone.png" draggable="false"> 0371-88888598　　4006-371-555</a>
 
 	</div>
 </header>
 
-
+<form action="videoshow">
     <div id="app">
         <!--banner图-->
         <div class="banner">
-        	<img alt="" src="../js/z/banner-1.jpg" width="100%" height="470px;">
+        	<a href=""><img alt="" src="http://localhost:8080/SSMVideo/z/banner-1.jpg" width="100%" height="470px;"></a>
         </div>
 
         <!--面包屑导航-->
@@ -61,8 +61,8 @@
              		<li class="section-main" onclick="getVideo(217)">
              		<div class="thum" style="background-image: url()"></div>
              		<p>前端开发环境搭建</p>
-             		<div class="classify-v-info"><span class="count" title="观看次数"><img src="../js/z/count.png" alt="">433</span>
-             		<span class="duration" title="视频时长"><img src="../js/z/player.png" alt="">562</span></div>
+             		<div class="classify-v-info"><span class="count" title="观看次数"><img src="http://localhost:8080/SSMVideo/js/z/count.png" alt="">433</span>
+             		<span class="duration" title="视频时长"><img src="http://localhost:8080/SSMVideo/z/player.png" alt="">562</span></div>
              		</li>            	
             	            
             </ul></div>
@@ -78,8 +78,8 @@
              		<li class="section-main" onclick="getVideo(245)">
              		<div class="thum" style="background-image: url()"></div>
              		<p>Git的安装及配置</p>
-             		<div class="classify-v-info"><span class="count" title="观看次数"><img src="../js/z/count.png" alt="">208</span>
-             		<span class="duration" title="视频时长"><img src="../js/z/player.png" alt="">320</span></div>
+             		<div class="classify-v-info"><span class="count" title="观看次数"><img src="http://localhost:8080/SSMVideo/z/count.png" alt="">208</span>
+             		<span class="duration" title="视频时长"><img src="http://localhost:8080/SSMVideo/z/player.png" alt="">320</span></div>
              		</li>
              	
              	            
@@ -92,25 +92,24 @@
             <div class="container" id="dataContainer"><div class="section"><div class="classifyName"><p class="title title-first">每天20分钟轻松入门React</p></div><div class="kcIntro"><p class="int"><span>课程介绍：</span>
             适合有一定HTML+JS基础、想学习React的同学。本课程循序渐进、浅显易懂，非常适合React入门学习。想进一步学习和使用React进行开发的同学可以报名智游前端开发课程。
             </p></div><ul>
-             
              		<li class="section-main" onclick="getVideo(224)">
              		<div class="thum" style="background-image: url()"></div>
              		<p>React快速体验-组件</p>
-             		<div class="classify-v-info"><span class="count" title="观看次数"><img src="../js/z/count.png" alt="">191</span>
-             		<span class="duration" title="视频时长"><img src="../js/z/player.png" alt="">907</span></div>
+             		<div class="classify-v-info"><span class="count" title="观看次数"><img src="http://localhost:8080/SSMVideo/js/z/count.png" alt="">191</span>
+             		<span class="duration" title="视频时长"><img src="http://localhost:8080/SSMVideo/js/z/player.png" alt="">907</span></div>
              		</li>
-
-             	            
-            </ul></div>
+             		</ul>
+          </div>
         </div>
     </div>
-
+  </div>
+</form>
     
 <!--页脚-->
 <footer>
 	<ul>
 		<li>
-			<img src="../js/z/footer_logo.png" alt="" draggable="false">
+			<img src="http://localhost:8080/SSMVideo/js/z/footer_logo.png" alt="" draggable="false">
 		</li>
 		<li class="mt25">
 			<h3>各校区地址</h3>
@@ -131,8 +130,8 @@
 				<li class="erwei">
 					<br>
 					<div>
-						<img class="weixin" src="./课程展示_files/a_002.png" alt="" draggable="false">
-						<img class="weibo" src="./课程展示_files/a.png" alt="" draggable="false">
+						<img class="weixin" src="http://localhost:8080/SSMVideo/z/a_002.png" alt="" draggable="false">
+						<img class="weibo" src="http://localhost:8080/SSMVideo/z/a.png" alt="" draggable="false">
 					</div>
 				</li>
 			</ul>
@@ -146,7 +145,7 @@
 <div class="mask hidden" id="login">
 	<div class="mask_content">
 		<div class="mask_content_header">
-			<img src="../js/z/logo.png" alt="" class="ma">
+			<img src="http://localhost:8080/SSMVideo/js/z/logo.png" alt="" class="ma">
 		</div>
 		<div class="mask_content_body">
 			<form id="loginForm" action="http://localhost:8080/Voids/#">
@@ -167,7 +166,7 @@
 <div class="mask hidden" id="reg">
 	<div class="mask_content">
 		<div class="mask_content_header">
-			<img src="../js/z/logo.png" alt="" class="ma">
+			<img src="http://localhost:8080/SSMVideo/js/z/logo.png" alt="" class="ma">
 		</div>
 		<div class="mask_content_body">
 			<form id="regForm" action="http://localhost:8080/Voids/user/insertUser.action">
@@ -195,9 +194,9 @@
 </form>
 
     
-<script src="../js/js/jquery-1.js"></script>
-<script src="../js/js/gVerify.js"></script>
-<script src="../js/js/index.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/js/jquery-1.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/js/gVerify.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/js/index.js"></script>
   
 
 

@@ -12,7 +12,7 @@
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>智游教育</title>
 
-<link href="../js/z/bootstrap.css" rel="stylesheet">
+<link href="http://localhost:8080/SSMVideo/z/bootstrap.css" rel="stylesheet">
 
 <style type="text/css">
 .col-md-1 {
@@ -77,20 +77,26 @@ b {
 
 	<div class="container" style="margin-top: 20px;">
 
-		<form id="infoForm" class="form-horizontal"  method="post" >
-
+		<form id="course" class="form-horizontal"  action="addCourse" method="post">
+            <input type="hidden" name="id" value="${course.id}">
 			
 			<div class="form-group">
 			    <label for="subjectId" class="col-sm-2 control-label">所属学科</label>
 			    <div class="col-sm-10">
 
-					<select name="subjectID" id="subjectId" class="form-control">
-						<option value="0" selected="selected">请选择所属学科</option>
-							
-							<option value="0">WEB前端</option>
-						
-
-						
+					<select name="subject_id" id="subject_id" class="form-control">
+						<option value="" selected="selected">请选择所属学科</option>
+							<option value="1">WEB前端</option>
+							<option value="2">java</option>
+						    <option value="3">Android</option>
+							<option value="4">IOS</option>
+							<option value="5">大数据</option>
+							<option value="6">UI</option>
+							<option value="7">VR</option>
+							<option value="8">U3D</option>
+							<option value="9">人工智能</option>
+							<option value="10">Python</option>
+							<option value="11">PHP</option>
 					</select>
 
 			    </div>
@@ -101,13 +107,13 @@ b {
 			<div class="form-group">
 				<label for="subjectTitle" class="col-sm-2 control-label">标题</label>
 				<div class="col-sm-10">
-					<input class="form-control" name="courseTitle" id="subjectTitle" placeholder="课程标题" type="text">
+					<input class="form-control" name="course_title" id="course_title" placeholder="课程标题" type="text" value="${course.course_title}">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="courseDesc" class="col-sm-2 control-label">简介</label>
 				<div class="col-sm-10">
-					<textarea class="form-control" id="courseDesc" name="courseDesc" rows="3"></textarea>
+					<textarea class="form-control" id="course_desc" name="course_desc" rows="3">${course.course_desc}</textarea>
 				</div>
 			</div>
 			<div class="form-group">
@@ -123,11 +129,11 @@ b {
 <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<script src="../js/js/jquery-1.js"></script>
-<script src="../js/js/bootstrap.js"></script>
-<script src="../js/js/confirm.js"></script>
-<script src="../js/js/jquery.js"></script>
-<script src="../js/js/message_cn.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/jquery-1.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/bootstrap.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/confirm.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/jquery.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/message_cn.js"></script>
 
 
 

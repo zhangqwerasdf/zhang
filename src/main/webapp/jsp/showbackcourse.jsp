@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -10,13 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>智游教育</title>
 		
-<link href="../js/js/bootstrap.css" rel="stylesheet">
+<link href="http://localhost:8080/SSMVideo/js/bootstrap.css" rel="stylesheet">
 
-<script src="../js/js/jquery-1.js"></script>
-<script src="../js/js/bootstrap.js"></script>
-<script src="../js/js/confirm.js"></script>
-<script src="../js/js/jquery.js"></script>
-<script src="../js/js/message_cn.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/jquery-1.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/bootstrap.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/confirm.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/jquery.js"></script>
+<script src="http://localhost:8080/SSMVideo/js/message_cn.js"></script>
 
 		<style type="text/css">
 		th {
@@ -35,24 +36,16 @@
 
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
 			<ul class="nav navbar-nav">
-				<li><a>视频管理</a></li>
-				<li><a>主讲人管理</a></li>
+				<li><a href="http://localhost:8080/SSMVideo/video/showvideo.jsp">视频管理</a></li>
+				<li><a href="http://localhost:8080/SSMVideo/speaker/speakershow.jsp">主讲人管理</a></li>
 				<li class="active"><a>课程管理</a></li>
 			</ul>
 			<p class="navbar-text navbar-right">
 				<span>admin</span> <i class="glyphicon glyphicon-log-in" aria-hidden="true"></i>&nbsp;&nbsp;<a  class="navbar-link">退出</a>
 			</p>
 		</div>
-		<!-- /.navbar-collapse -->
-
-
 	</div>
-	<!-- /.container-fluid -->
 </nav>
-
-	
-	
-		
 	
     
     <div class="jumbotron" style="padding-top: 15px;padding-bottom: 15px;">
@@ -60,8 +53,7 @@
 	          <h2>课程管理</h2>
 	  </div>
 	</div>
-	
-	<form action="http://localhost:8080/Voids/Course/deleteall.do">
+	<form action="">
 	<div class="container">
 	    <button onclick="showAddPage()" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		      添加
@@ -72,9 +64,10 @@
 		</button>
 	</div>
 	
+	
 	<div class="container" style="margin-top: 20px;">
 		
-		<table class="table table-bordered table-hover" style="text-align: center;table-layout:fixed;">
+   <table class="table table-bordered table-hover" style="text-align: center;table-layout:fixed;">
       <thead>
         <tr class="active">
           <th><input type="checkbox" id="all"></th>
@@ -87,12 +80,12 @@
       </thead>
       <tbody>
         
-        <tr>
+     <!--    <tr>
           <td><input type="checkbox" ></td>
           <td>6</td>
           <td>Web前端入门小项目</td>
           <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">适合无编程基础但想学H5前端开发的同学入门学习，也适合UI、Java、PHP等其他学科学员预习或练习。本课程通过新闻页面、个人主页、个人简历、场景秀等多个项目案例由浅入深以项目实战的方式让同学们体验到前端开发乐趣。本课程突出实战，如果希望深入学习课程中涉及到的知识可报名学习智游前端开发课程。</td>
-          <td><a>✎</a></td>
+          <td><a >✎</a></td>
           <td><a onclick="deletee(&#39;6&#39;)" >X</a></td>
           </tr>
         
@@ -101,8 +94,8 @@
           <td>7</td>
           <td>前端开发与Git入门</td>
           <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。经过本章课程学习你将轻松入门，学会使用Git管理自己的源代码，让自己的开发之路井井有条，想进一步学习Git进阶部分的同学可报名智游前端开发课程。</td>
-          <td><a>✎</a></td>
-          <td><a onclick="deletee(&#39;7&#39;)" >X</a></td>
+          <td><a href="updatec">✎</a></td>
+          <td><a onclick="delete(&#39;7&#39;)" >X</a></td>
           </tr>
         
         <tr>
@@ -131,20 +124,32 @@
           <td><a>✎</a></td>
           <td><a onclick="deletee(&#39;11&#39;)">X</a></td>
           </tr>
-        
-        <tr>
+        <tr> -->
+        <c:if test="${list.size()>0}">
+        <c:forEach begin="0" end="${list.size()-1}" var="i">
+            <tr>
+              <td><input type="checkbox"></td>
+		      <td>${list[i].id}</td>
+		      <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${list[i].course_title}</td>
+		      <td style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${list[i].course_desc}</td>
+		      <td><a href="updatec">✎</a></td>
+		      <td><a href="deleteCourse">X</a></td>
+            </tr>
+         
+        </c:forEach>
+        </c:if>
+        </tbody>
+      </table> 
         <td colspan="2">
         <font>总共6条,当前第1页</font>
 		<a href=""> 1</a>&gt;
 		<a href="">2</a>&gt;
         </td></tr>
-        </tbody>
-      </table> 
 	</div>
 	  </form>
 	<script type="text/javascript">
 		function showAddPage(){
-			location.href="Course/addCourse.do";
+			location.href="addc";
 		}
 		function delCourseById(Obj,id,title){
 
